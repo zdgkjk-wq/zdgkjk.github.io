@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🎵</title>
+</head>
+<body>
+  <p style="font-size:20px;text-align:center;margin-top:40vh;">点一下屏幕开始播放</p>
+  <audio id="bgm" src="k-202691520364.mp3" loop></audio>
+  <script>
+    const a = document.getElementById('bgm');
+    const play = () => a.play().catch(()=>{});
+    a.addEventListener('canplay', play);
+    document.addEventListener('touchstart', play, {once:true});
+    document.addEventListener('click', play, {once:true});
+  </script>
+</body>
+</html>
